@@ -38,18 +38,6 @@ router.get("/", async (req, res) => {
     }
 });
 
-// PUT - Update product
-// router.put("/:id", upload.array("images", 5), async (req, res) => {
-//     try {
-//         const { name, price } = req.body;
-//         const images = req.files.map(file => file.path);
-//         const updated = await Product.findByIdAndUpdate(req.params.id, { name, price, images }, { new: true });
-//         res.json(updated);
-//     } catch (err) {
-//         res.status(500).json({ error: err.message });
-//     }
-// });
-
 router.put("/:id", upload.array("images", 5), async (req, res) => {
     try {
         const { name, price } = req.body;
@@ -75,16 +63,6 @@ router.put("/:id", upload.array("images", 5), async (req, res) => {
     }
 });
 
-
-// // DELETE - Remove product
-// router.delete("/:id", async (req, res) => {
-//     try {
-//         await Product.findByIdAndDelete(req.params.id);
-//         res.json({ message: "Product deleted successfully" });
-//     } catch (err) {
-//         res.status(500).json({ error: err.message });
-//     }
-// });
 
 router.delete("/:id", async (req, res) => {
     try {
