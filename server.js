@@ -52,7 +52,8 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
-const connectDb = require("../utils/db"); // move one level up because inside /api
+// const connectDb = require("./utils/db"); // move one level up because inside /api
+const connectDb = require("./utils/db");
 
 // Routes
 const authRoutes = require("../router/auth-router");
